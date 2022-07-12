@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <style>
+        body {
+            background-color: black;
+            color: rgb(245, 245, 247);
+            font-family: "SF Pro TC", "SF Pro Text", "SF Pro Icons", "PingFang TC", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+        }
+        .logo {
+            margin: 0 auto;
+            background-image: url('logo.png');
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: 200px;
+            width: 150px;
+            height: 100px;
+        }
+        .model {
+            margin: 0 auto;
+            background: url('model.png');
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+            border: #FFFFFF33 1px solid;
+            width: 300px;
+            height: 200px;
+        }
+        .quicklook {
+            margin: 0 auto;
+            text-decoration: none;
+            color: #3579F6;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        (function () {
+            var isRelAR = false;
+            var a = document.createElement('a');
+            if (a.relList.supports('ar')) {
+                isRelAR = true;
+            }
+            document.documentElement.classList.add(isRelAR ? 'relar' : 'no-relar');
+        })();
+
+
+    </script>
+</head>
+<body>
+    <div class="logo"></div>
+    <div class="model"></div>
+    <div style="margin: 0 auto; width:fit-content;">
+        <a class="quicklook" rel="ar" href="GameObject.usdz">使用 AR 觀看 <span><img src="arkit.png" height="13px"></span></a>
+    </div>
+</body>
+</html>
+
